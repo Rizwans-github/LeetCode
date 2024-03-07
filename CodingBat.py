@@ -185,3 +185,62 @@ def front3(str):
   else:
     return str*3
 
+'''
+Warmup-2 > string_times
+
+Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+
+
+string_times('Hi', 2) → 'HiHi'
+string_times('Hi', 3) → 'HiHiHi'
+string_times('Hi', 1) → 'Hi'
+'''
+def string_times(str, n):
+  return str*n
+
+'''
+Warmup-2 > front_times
+
+Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front;
+
+
+front_times('Chocolate', 2) → 'ChoCho'
+front_times('Chocolate', 3) → 'ChoChoCho'
+front_times('Abc', 3) → 'AbcAbcAbc'
+'''
+def front_times(str, n):
+  if len(str) <= 3:
+    return str*n
+  else:
+    return str[:3]*n
+
+'''
+Warmup-2 > string_bits
+
+Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+
+
+string_bits('Hello') → 'Hlo'
+string_bits('Hi') → 'H'
+string_bits('Heeololeo') → 'Hello'
+'''
+def string_bits(str):
+  return str[::2]
+
+'''
+Warmup-2 > string_splosion
+
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+
+string_splosion('Code') → 'CCoCodCode'
+string_splosion('abc') → 'aababc'
+string_splosion('ab') → 'aab'
+'''
+def string_splosion(str):
+  word=""
+  pos=1
+  for i in str:
+    word += str[:pos]
+    pos+=1
+  return word
