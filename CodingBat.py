@@ -244,3 +244,44 @@ def string_splosion(str):
     word += str[:pos]
     pos+=1
   return word
+
+'''
+Warmup-2 > array_count9
+
+Given an array of ints, return the number of 9's in the array.
+
+
+array_count9([1, 2, 9]) → 1
+array_count9([1, 9, 9]) → 2
+array_count9([1, 9, 9, 3, 9]) → 3
+'''
+def array_count9(nums):
+  count = 0
+  for i in nums:
+    if i == 9:
+      count+=1
+  return count
+
+'''
+Warmup-2 > array_front9
+
+Given an array of ints, return True if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+
+
+array_front9([1, 2, 9, 3, 4]) → True
+array_front9([1, 2, 3, 4, 9]) → False
+array_front9([1, 2, 3, 4, 5]) → False
+'''
+def array_front9(nums):
+  if len(nums) >=4:
+    if 9 in nums[:4]:
+      return True
+    else:
+      return False
+  else:
+    if 9 in nums:
+      return True
+    else:
+      return False
+
+    
