@@ -1,4 +1,3 @@
-
 # Write your MySQL query statement below
 SELECT st.student_id, st.student_name, sub.subject_name, COUNT(ex.student_id) AS attended_exams
 FROM Students AS st
